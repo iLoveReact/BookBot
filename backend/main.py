@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 from langchain_community.vectorstores import FAISS
 from langchain_core.runnables import RunnablePassthrough
-from langchain_core.tools import Tool, StructuredTool
+from langchain_core.tools import StructuredTool
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain import hub
 from langchain.agents import AgentExecutor, create_react_agent
