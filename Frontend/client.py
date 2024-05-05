@@ -27,7 +27,7 @@ def ask_user():
 
         error = res.json()["error"]
         answer = res.json()["answer"]
-
+        st.header("Answer:")
         if (error):
             st.write("No answer found, try to rephrase the question")
         else:

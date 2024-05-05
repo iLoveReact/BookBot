@@ -73,8 +73,6 @@ def answer_question_about_book(book_name: str, question: str) -> Answer:
     return result
 
 
-# answer_question_about_book("Adventures of Tom Sawyer", "How did Tom Sawyer trick other kids to also paint the fence?")
-
 
 @app.route("/ask", methods=["POST"])
 def ask():
