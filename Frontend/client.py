@@ -12,6 +12,12 @@ book = st.radio(
     options=["Anne Of Green Gables", "The Old Man And The Sea", "Adventures Of Tom Sawyer"],
 )
 
+st.header("Example Questions: ")
+
+st.write("Why Diana was drunk? (Anne of the green gables)")
+st.write("How Tom Sawyer managed to convince other children to paint the fence? (Adventures of Tom Sawyer)")
+st.write("For how long Santiago was unable to catch any fish? (Old man and the sea)")
+
 def ask_user():
     if book and question:
         res = requests.post(

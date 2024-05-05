@@ -1,0 +1,8 @@
+# About #
+A LLM based app, that retrievs information from books and answers your questions
+
+# How to use #
+1. Clone the repository
+2. Create `.env` file and fill out with required fields from `example.env`
+3. Run `docker compose up`
+4. Go to `http://127.0.0.1:8501/`
