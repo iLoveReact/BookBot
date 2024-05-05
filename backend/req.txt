@@ -1,0 +1,11 @@
+flask
+langchain
+langchain_community
+python-dotenv
+langchain_core
+langchain_openai
+pathlib
+typing
+langchainhub
+faiss-cpu
+pypdf

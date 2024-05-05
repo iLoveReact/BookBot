@@ -8,7 +8,7 @@ from langchain_text_splitters import CharacterTextSplitter
 
 def embed_a_book(book_path: str) -> str:
     # Returns path to the book index
-    indexes_path = str(pathlib.Path().resolve()).replace("\\", "/") + "/indexes"
+    indexes_path = str(pathlib.Path().resolve()).replace("\\", "/") + "/Indexes"
     available_indexes = [index for index in os.listdir(indexes_path)]
     searched_path = book_path.split("/")[-1] + "_index"
 

@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - '3000:3000'
+    networks:
+      - my_network
+    volumes:
+      - books:/code/Indexes
+  fronted:
+    build: ./Frontend
+    ports:
+      - '8501:8501'
+    depends_on:
+      - backend
+    networks:
+      - my_network
+networks:
+  my_network:
+    driver: bridge
+volumes:
+  books:

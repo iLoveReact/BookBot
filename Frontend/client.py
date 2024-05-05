@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 
 
-SERVER_URL = "http://127.0.0.1:3000/ask"
 
 # Streamlit header
 st.header("Bot to answer questions about events from books")
@@ -16,7 +15,7 @@ book = st.radio(
 def ask_user():
     if book and question:
         res = requests.post(
-            "http://127.0.0.1:3000/ask",
+            "http://backend:3000/ask",
             json={"book_name": book, "question": question}
         )
 

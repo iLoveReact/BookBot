@@ -80,10 +80,12 @@ def answer_question_about_book(book_name: str, question: str) -> Answer:
 def ask():
     book_name = request.json.get("book_name")
     question = request.json.get("question")
+    print(book_name, question)
 
     res = answer_question_about_book(book_name, question)
-    answer = res.answer
-    error = res.error
+    print(res)
+    answer = res.answer or "df"
+    error = res.error if res.error else False
 
     return jsonify(
         {
@@ -92,6 +94,5 @@ def ask():
         }
     )
 
-
 if __name__ == '__main__':
-    app.run(port=3000)
+    app.run(port=3000, host="0.0.0.0")
